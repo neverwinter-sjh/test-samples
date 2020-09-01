@@ -2,7 +2,7 @@
 
 Vanilla Javascript 내용 중 궁금하거나 실험이 필요한 내용을 테스트해 보는 저장소
 
-### promise-test.html
+### 1. promise-test.html
 
 * ajax 통신 외에 promise 패턴을 사용할 필요가 있나 하는 궁금증으로 테스트해봄
 * 0부터 59999까지 i를 1씩 증가시키고 계산이 끝나면 로그를 남긴다.
