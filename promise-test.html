@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function calcurate() {
+        return new Promise(function (resolve, reject) {
+          try {
+            let i = 0;
+            while (i < 60000) {
+              if (i === 59999) {
+                resolve(i);
+                break;
+              } else {                
+                i += 1;
+              }
+            }
+          } catch (e) {
+            reject(e);
+          }
+        }).then(r => r);
+      }
+
+      async function main() {
+        console.log("Start Calcurating...");
+        const result = await calcurate();         
+        console.log(result);
+        const result2 = await calcurate();         
+        console.log(result2);
+        console.log("End of Calcurating.");
+      }
+
+      main();
+    </script>
+  </body>
+</html>
